@@ -58,7 +58,7 @@ class Seg
   def retract
     return nil if init?
 
-    offs = @pos.pred
+    offs = @pos - 1
     @pos = @path.rindex(SLASH, offs)
 
     return @path[@pos.succ, offs - @pos]
